@@ -34,8 +34,18 @@
                 info(){
                     return this.isHot ? '炎热' : '凉爽'
                 }
+            },
+            watch:{
+                isHot:{
+                    immediate: true, //初始化时让handler调用一下
+                    //当isHot发生改变时调用handler
+                    handler(newValue,oldValue){
+                        
+                    }
+                }
             }
         })
+
 
     </script>
 
